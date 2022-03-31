@@ -1,0 +1,93 @@
+
+
+@font-face {
+    font-family: "SVN-Gilroy-Black-Italic";
+    src: url("./assets/fonts/SVN-Gilroy-Black-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Black";
+    src: url("./assets/fonts/SVN-Gilroy-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Bold-Italic";
+    src: url("./assets/fonts/SVN-Gilroy-Bold-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Bold";
+    src: url("./assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Heavy";
+    src: url("./assets/fonts/SVN-Gilroy-Heavy.otf") format("opentype");
+}
+@font-face {
+    font-family: "SVN-Gilroy-Heavy-Italic";
+    src: url("./assets/fonts/SVN-Gilroy-Heavy-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Italic";
+    src: url("./assets/fonts/SVN-Gilroy-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Light-Italic";
+    src: url("./assets/fonts/SVN-Gilroy-Light-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Light";
+    src: url("./assets/fonts/SVN-Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Medium-Italic";
+    src: url("./assets/fonts/SVN-Gilroy-Medium-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Medium";
+    src: url("./assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-Regular";
+    src: url("./assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SVN-Gilroy-SemiBold";
+    src: url("./assets/fonts/SVN-Gilroy-SemiBold.otf") format("opentype");
+}
+
+
+.App {
+    text-align: center;
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+
+
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

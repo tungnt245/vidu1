@@ -8,6 +8,8 @@ import ForgotPassword from './components/ForgotPassword';
 import ForgetPassword from './components/ForgetPassword';
 import Topic from './components/Topic';
 import Menu from './components/Menu';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {

@@ -10,6 +10,10 @@ import Topic from './components/Topic';
 import Menu from './components/Menu';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Library from "./components/Library";
+import Parem from "./components/Parem";
+
+
 
 
 function App() {
@@ -22,7 +26,11 @@ function App() {
          <Route path='/forgot' element = {<ForgotPassword/>}/>
          <Route path='/forget' element = {< ForgetPassword/>}/>
          <Route path='/topic' element = {<Topic/>}/>
-         <Route path='menu' element = {<Menu/>}/>
+         <Route path='/menu' element = {<Menu/>}/>
+         <Route path ="library" element={<Library/>}/>
+         <Route path ="parem" element={<Parem/>}/>
+
+
        </Routes>
     </div>
   );

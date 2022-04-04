@@ -18,7 +18,7 @@ function LoginPage() {
 				</div>
 				<div className="auth-content">
 					<div className="form-login">
-						<div className="title">
+						<div className="title-login">
 							Đăng nhập
 							<br />
 							và khám phá

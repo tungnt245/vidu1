@@ -1,5 +1,5 @@
 import React from 'react';
-import './menu.scss';
+import './style7.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'reactstrap';
 import Logobit from '../image/Logobit.png';
@@ -24,48 +24,21 @@ import bocongthuong from '../image/bocongthuong.png';
 import apple from '../image/apple.png';
 import Badge from '../image/Badge.png';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
-import NextButton from "./button/NextButton";
-import PrevButton from "./button/PrevButton"
-
-function Menu() {
+import show from "../image/show.png"
+import QT from "../image/QT.png";
+function Parem() {
 	const settings = {
-		className: 'center',
 		centerMode: true,
 		dots: true,
 		infinite: true,
-		variableWidth: true,
 		adaptiveHeight: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		initialSlide: 0,
-		nextArrow: <NextButton />,
-		prevArrow: <PrevButton />,
+		initialSlide: 0
 	};
 	const idCSS = 'hello';
 
-	const img = [
-		{
-			id: 1,
-			src: 'https://img4.thuthuatphanmem.vn/uploads/2020/02/12/anh-chat-tong-hop-nhung-hinh-anh-chat-nhat_101919844.jpg'
-		},
-		{
-			id: 2,
-			src: 'https://img4.thuthuatphanmem.vn/uploads/2020/02/12/anh-chat-tong-hop-nhung-hinh-anh-chat-nhat_101919844.jpg'
-		},
-		{
-			id: 3,
-			src: 'https://img4.thuthuatphanmem.vn/uploads/2020/02/12/anh-chat-tong-hop-nhung-hinh-anh-chat-nhat_101919844.jpg'
-		},
-		{
-			id: 4,
-			src: 'https://img4.thuthuatphanmem.vn/uploads/2020/02/12/anh-chat-tong-hop-nhung-hinh-anh-chat-nhat_101919844.jpg'
-		},
-		{
-			id: 5,
-			src: 'https://img4.thuthuatphanmem.vn/uploads/2020/02/12/anh-chat-tong-hop-nhung-hinh-anh-chat-nhat_101919844.jpg'
-		}
-	];
 
 	return (
 		<div className="Menu">
@@ -138,54 +111,44 @@ function Menu() {
 				</div>
 				<div className="home">
 					<div className="menu-content">
-						<Link to="/"></Link>
+						<Link to="/menu">
 						<div className="menu-content-title">
 							<button className="tatca">Tất cả</button>
 						</div>
-                      <Link to="/library"><div className="menu-content-title">
+						</Link>
+                        <Link to="/library">
+						<div className="menu-content-title">
 							<button className="thuvien">Thư viện</button>
-						</div></Link>
-                    <Link to="/parem"><div className="menu-content-title">
+						</div>
+						</Link>
+
+						<div className="menu-content-title">
 							<button className="quatang">Quà tặng</button>
-						</div></Link>
+						</div>
+					</div>
 
-					</div>
-					<div className="search-input">
-						<div className="search-icon">
-							<img className="img-icon" src={Icon.frame} />
-						</div>
-						<input
-							className="inputsearch"
-							type="text"
-							placeholder="Tìm kiếm sách"
-						/>
-					</div>
-					<div className="progress-information">
-						<div className="banner">
-							<img className="imgrec" src={Icon.rec} />
-						</div>
-						<div className="detail">
-							<div className="recently">Đang xem gần đây</div>
-							<div className="titles">
-								Barack Obama và sự nghiệp The Audacie of the
-								Legend off all the time
-							</div>
-							<div className="audion">Barack Obama</div>
-							<div className="progress-current">
-								<div className="pro">29%</div>
+					<div className='gift-content-box'>
+						<span className='gift-content'>
+							<img className='img-show' src = {show}/>
+							<div className='gift-info'>
+								<div className='gift-title'>Mã quà tặng</div>
+								<div className='gift-text'>Mở khóa sách để nhận quà</div>
+								<form className='gift-form'>
+									<input type="text" className='gift-input' placeholder='Nhập mã quà tặng'/>
 
-								<ProgressBar className="prog" now={29} />
+										<img className='buton-img' src={Icon.muiten}/>
+
+								</form>
 							</div>
-							<div className="continue-reading">
-								<button className="continue-reading-btn">
-									Tiếp tục đọc
-								</button>
+							<div className='QT'>
+								<img src = {QT}/>
 							</div>
-						</div>
+						</span>
 					</div>
+
 					<div className="home__body">
 						<div className="home-suggest">
-							<span className='booking'>Gợi ý cho bạn </span>
+							<span className='booking'>Tất cả sách </span>
 							<div className="scrool">
 								<div className="sach1">
 									<img
@@ -230,7 +193,7 @@ function Menu() {
 							</div>
 						</div>
 						<div className="home-suggest">
-						<span className='sachhay'> Sách hay phải đọc</span>
+
 							<div className="scrool">
 								<div className="sach1">
 									<img
@@ -275,29 +238,7 @@ function Menu() {
 							</div>
 						</div>
 
-						<div className='slider'>
-							<Slider className="home-baner" {...settings}>
-								<div>
-									<h3>
-										<img className="img-caro" src={caro1} />
 
-									</h3>
-								</div>
-								<div>
-									<h3>
-										<img className="img-caro" src={caro2} />
-
-									</h3>
-								</div>
-								<div>
-									<h3>
-										<img className="img-caro" src={caro3} />
-									</h3>
-								</div>
-							</Slider>
-						</div>
-
-						<div className="book-title6">Marketing và bán hàng</div>
 						<div className="scrool">
 							<div className="sach1">
 								<img className="sachauto" src={Icon.sach5} />
@@ -483,40 +424,7 @@ function Menu() {
 							</div>
 						</div>
 					</div>
-					<div className="target-read-book__home">
-						<div className="target-title">Mục tiêu đọc sách</div>
-						<div className="progress-target">
-							<SVG />
-							<CircularProgressbarWithChildren
-								strokeWidth={7}
-								value={30}
-								styles={{
-									path: {
-										stroke: `url(#${idCSS})`,
-										height: '100%'
-									},
-									trail: {
-										stroke: '#eee5fe'
-									}
-								}}
-							>
-								<div
-									className="circular-progressbar__library"
-									style={{ width: '200px' }}
-								>
-									<div className="circular-ratio__library">
-										30/100
-									</div>
-									<div className="circular-title__library">
-										Số trang sách <br /> đã đọc hôm nay
-									</div>
-								</div>
-							</CircularProgressbarWithChildren>
-						</div>
-						<button className="change-target-btn">
-							Thay đổi mục tiêu
-						</button>
-					</div>
+
 				</div>
 			</div>
 			<div className="footer">
@@ -602,7 +510,8 @@ function Menu() {
 					</div>
 				</div>
 			</div>
+
 		</div>
 	);
 }
-export default Menu;
+export default Parem;

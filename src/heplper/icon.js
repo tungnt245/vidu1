@@ -30,7 +30,15 @@ import sach8 from "../assets/icon/sach8.svg";
 import Bell from "../assets/icon/Bell.svg";
 import Cart from "../assets/icon/Cart.svg";
 import People from "../assets/icon/People.svg";
+import youtobe from "../assets/icon/youtobe.svg"
+import sky from "../assets/icon/sky.svg";
+import face from "../assets/icon/face.svg";
+import intagam from "../assets/icon/intagam.svg";
 import { ReactComponent as Home } from '../assets/icon/Home.svg';
+import muiten from "../assets/icon/muiten.svg";
+import arrownext from "../assets/icon/arrownext.svg";
+import arrowprive from "../assets/icon/arrowprive.svg";
+import pre from "../assets/icon/pre.svg";
 
 const Icon = {
 	facebookicon,
@@ -65,6 +73,14 @@ const Icon = {
 	Bell,
 	Cart,
 	People,
+	youtobe,
+	sky,
+	face,
+	intagam,
+	muiten,
+	arrownext,
+	arrowprive,
+	pre,
 
 }
 export {Home}

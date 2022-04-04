@@ -1,5 +1,5 @@
 import React from 'react';
-import './menu.scss';
+import './library.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'reactstrap';
 import Logobit from '../image/Logobit.png';
@@ -24,23 +24,17 @@ import bocongthuong from '../image/bocongthuong.png';
 import apple from '../image/apple.png';
 import Badge from '../image/Badge.png';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
-import NextButton from "./button/NextButton";
-import PrevButton from "./button/PrevButton"
-
-function Menu() {
+function Library() {
 	const settings = {
-		className: 'center',
 		centerMode: true,
 		dots: true,
 		infinite: true,
-		variableWidth: true,
 		adaptiveHeight: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		initialSlide: 0,
-		nextArrow: <NextButton />,
-		prevArrow: <PrevButton />,
+		initialSlide: 0
+
 	};
 	const idCSS = 'hello';
 
@@ -138,18 +132,27 @@ function Menu() {
 				</div>
 				<div className="home">
 					<div className="menu-content">
-						<Link to="/"></Link>
+						<Link to="/menu">
 						<div className="menu-content-title">
 							<button className="tatca">Tất cả</button>
 						</div>
-                      <Link to="/library"><div className="menu-content-title">
+						</Link>
+                         <Link to="/library">
+						 <div className="menu-content-title">
 							<button className="thuvien">Thư viện</button>
-						</div></Link>
-                    <Link to="/parem"><div className="menu-content-title">
+						</div>
+						 </Link>
+                           <Link to="/parem">
+						   <div className="menu-content-title">
 							<button className="quatang">Quà tặng</button>
-						</div></Link>
+						</div>
+						   </Link>
 
 					</div>
+					<ul className="navlink-library">
+						<button className="navbuton1">Sách đã mở khóa</button>
+						<button className="navbuton2">Sách quan tâm</button>
+					</ul>
 					<div className="search-input">
 						<div className="search-icon">
 							<img className="img-icon" src={Icon.frame} />
@@ -160,77 +163,57 @@ function Menu() {
 							placeholder="Tìm kiếm sách"
 						/>
 					</div>
-					<div className="progress-information">
-						<div className="banner">
-							<img className="imgrec" src={Icon.rec} />
+					<div
+						className="target-read-book__libbrary"
+						style={{ display: 'flex' }}
+					>
+						<div className="progress-target">
+							<SVG />
+							<CircularProgressbarWithChildren
+								strokeWidth={7}
+								value={30}
+								styles={{
+									path: {
+										stroke: `url(#${idCSS})`,
+										height: '100%'
+									},
+									trail: {
+										stroke: '#eee5fe'
+									}
+								}}
+							>
+								<div
+									className="circular-progressbar__library"
+									style={{ width: '200px' }}
+								>
+									<div className="circular-ratio__library">
+										24/30
+									</div>
+									<div className="circular-title__library">
+										Số trang sách <br /> đã đọc hôm nay
+									</div>
+								</div>
+							</CircularProgressbarWithChildren>
 						</div>
-						<div className="detail">
-							<div className="recently">Đang xem gần đây</div>
-							<div className="titles">
-								Barack Obama và sự nghiệp The Audacie of the
-								Legend off all the time
+						<div className="navar">
+							<div className="gap">
+								<div className="target-title">
+									Mục tiêu đọc sách
+								</div>
+								<span className="semibo">
+									Trang sách bạn đã đọc trong ngày hôm nay
+								</span>
 							</div>
-							<div className="audion">Barack Obama</div>
-							<div className="progress-current">
-								<div className="pro">29%</div>
 
-								<ProgressBar className="prog" now={29} />
-							</div>
-							<div className="continue-reading">
-								<button className="continue-reading-btn">
-									Tiếp tục đọc
-								</button>
-							</div>
+						  <button className="change-target-btn">
+								Thay đổi mục tiêu
+							</button>
+
+
 						</div>
 					</div>
 					<div className="home__body">
 						<div className="home-suggest">
-							<span className='booking'>Gợi ý cho bạn </span>
-							<div className="scrool">
-								<div className="sach1">
-									<img
-										className="sachauto"
-										src={Icon.sach4}
-									/>
-									<div className="sachdoc">
-										Can they do that tomorrow?{' '}
-									</div>
-									<div className="tacgia">John Wick</div>
-								</div>
-								<div className="sach1">
-									<img
-										className="sachauto"
-										src={Icon.sach3}
-									/>
-									<div className="sachdoc">
-										Đàn ông sao hỏa đàn bà sao
-									</div>
-									<div className="tacgia">Amada Natsuki</div>
-								</div>
-								<div className="sach1">
-									<img
-										className="sachauto"
-										src={Icon.sach2}
-									/>
-									<div className="sachdoc">
-										Follow me to ground
-									</div>
-									<div className="tacgia">Nguyễn Hiến Lê</div>
-								</div>
-								<div className="sach1">
-									<img
-										className="sachauto"
-										src={Icon.sach1}
-									/>
-									<div className="sachdoc">
-										Barrack Obama the audacity of
-									</div>
-									<div className="tacgia"> Barrack Obama</div>
-								</div>
-							</div>
-						</div>
-						<div className="home-suggest">
-						<span className='sachhay'> Sách hay phải đọc</span>
 							<div className="scrool">
 								<div className="sach1">
 									<img
@@ -275,29 +258,6 @@ function Menu() {
 							</div>
 						</div>
 
-						<div className='slider'>
-							<Slider className="home-baner" {...settings}>
-								<div>
-									<h3>
-										<img className="img-caro" src={caro1} />
-
-									</h3>
-								</div>
-								<div>
-									<h3>
-										<img className="img-caro" src={caro2} />
-
-									</h3>
-								</div>
-								<div>
-									<h3>
-										<img className="img-caro" src={caro3} />
-									</h3>
-								</div>
-							</Slider>
-						</div>
-
-						<div className="book-title6">Marketing và bán hàng</div>
 						<div className="scrool">
 							<div className="sach1">
 								<img className="sachauto" src={Icon.sach5} />
@@ -355,7 +315,7 @@ function Menu() {
 						</div>
 					</div>
 					<div className="suggest-listen">
-						<span className='nghenhieunhat'>Nghe nhiều nhất</span>
+						<span className="nghenhieunhat">Nghe nhiều nhất</span>
 						<div className="suggest-listen-content">
 							<div className="suggest-information">
 								<div className="banner">
@@ -483,40 +443,6 @@ function Menu() {
 							</div>
 						</div>
 					</div>
-					<div className="target-read-book__home">
-						<div className="target-title">Mục tiêu đọc sách</div>
-						<div className="progress-target">
-							<SVG />
-							<CircularProgressbarWithChildren
-								strokeWidth={7}
-								value={30}
-								styles={{
-									path: {
-										stroke: `url(#${idCSS})`,
-										height: '100%'
-									},
-									trail: {
-										stroke: '#eee5fe'
-									}
-								}}
-							>
-								<div
-									className="circular-progressbar__library"
-									style={{ width: '200px' }}
-								>
-									<div className="circular-ratio__library">
-										30/100
-									</div>
-									<div className="circular-title__library">
-										Số trang sách <br /> đã đọc hôm nay
-									</div>
-								</div>
-							</CircularProgressbarWithChildren>
-						</div>
-						<button className="change-target-btn">
-							Thay đổi mục tiêu
-						</button>
-					</div>
 				</div>
 			</div>
 			<div className="footer">
@@ -605,4 +531,4 @@ function Menu() {
 		</div>
 	);
 }
-export default Menu;
+export default Library;

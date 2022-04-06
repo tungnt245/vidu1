@@ -12,6 +12,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Library from "./components/Library";
 import Parem from "./components/Parem";
+import Player from "./components/Player";
+import Doc from "./components/Doc";
 
 
 
@@ -29,6 +31,8 @@ function App() {
          <Route path='/menu' element = {<Menu/>}/>
          <Route path ="library" element={<Library/>}/>
          <Route path ="parem" element={<Parem/>}/>
+         <Route path ="player" element={<Player/>}/>
+         <Route path ="doc" element={<Doc/>}/>
 
 
        </Routes>

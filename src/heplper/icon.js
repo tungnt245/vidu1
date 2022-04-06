@@ -39,8 +39,37 @@ import muiten from "../assets/icon/muiten.svg";
 import arrownext from "../assets/icon/arrownext.svg";
 import arrowprive from "../assets/icon/arrowprive.svg";
 import pre from "../assets/icon/pre.svg";
+import chamtron from "../assets/icon/chamtron.svg";
+import Playhead from "../assets/icon/Playhead.svg";
+import pore from "../assets/icon/pore.svg";
+import nexttop from "../assets/icon/nexttop.svg"
+import Actions from "../assets/icon/Actions.svg";
+import Bookmark from "../assets/icon/Bookmark.svg";
+import Bullets from "../assets/icon/Bullets.svg";
+import carbon from "../assets/icon/carbon.svg";
+import Vectorabc from "../assets/icon/Vectorabc.svg";
+import Vectors from "../assets/icon/Vectors.svg";
+import Vectorsr from "../assets/icon/Vectorsr.svg";
+import Full from "../assets/icon/Full.svg";
+import Grid from "../assets/icon/Grid.svg";
+import cil from "../assets/icon/cil.svg";
+import Play from "../assets/icon/Play.svg";
+import codicon from "../assets/icon/codicon.svg";
+
 
 const Icon = {
+	codicon,
+	Actions,
+	Play,
+	Bookmark,
+	Bullets,
+	carbon,
+	Vectorabc,
+	Vectors,
+	Vectorsr,
+	Full,
+	Grid,
+	cil,
 	facebookicon,
 	IconBack,
 	Iconback1,
@@ -81,6 +110,10 @@ const Icon = {
 	arrownext,
 	arrowprive,
 	pre,
+	chamtron,
+	Playhead,
+	pore,
+	nexttop,
 
 }
 export {Home}
